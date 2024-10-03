@@ -190,7 +190,12 @@ class _TodoPageState extends State<TodoPage> {
                           children: [
                             Text(
                               capitalize(_todoList[index]),
-                              style: Theme.of(context).textTheme.bodyLarge,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                  ),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.min,
